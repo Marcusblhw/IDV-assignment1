@@ -1,14 +1,59 @@
 body {
     font-family: "Open Sans", sans-serif;
+    /* centers the heading and status text */
+    text-align: center;
+    background-color: #f7f9fb;
+    color: #2d3a45;
+}
+
+/* the "Last updated" line under the heading */
+#status {
+    font-size: 1rem;
+    color: #5a6b78;
+    margin-bottom: 24px;
+}
+
+/* the "Data source" line under the table */
+.source {
+    font-size: 0.85rem;
+    color: #5a6b78;
+    margin-top: 20px;
+}
+
+.source a {
+    color: #3a7ca5;
 }
 
 table {
-    border-collapse: separate;
-    border: 1px solid;
+    /* collapse merges neighbouring cell borders into one line so the dividers look clean */
+    border-collapse: collapse;
+    /* auto left/right margins center the table itself on the page */
+    margin: 0 auto;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 th,
 td {
-    border: 1px solid;
-    padding: 6px;
+    padding: 10px 16px;
+    /* centers the text inside each cell */
+    text-align: center;
+    /* only a bottom border = horizontal dividers, no vertical lines */
+    border-bottom: 1px solid #dde5ec;
+}
+
+th {
+    background-color: #3a7ca5;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* light stripe on every other row makes rows easier to follow */
+tbody tr:nth-child(even) {
+    background-color: #f2f7fa;
+}
+
+/* hover: highlight the row the mouse is over */
+tbody tr:hover {
+    background-color: #d9ebf5;
 }

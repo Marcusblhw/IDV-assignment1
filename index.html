@@ -1,23 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- head is like the meta data of the html page-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- title is the text people see in the chrome tab-->
     <title>Singapore PSI Readings</title>
+
+<!--linking to google so that I can use their fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap">
     <link rel="stylesheet" href="stylesheets/mystyle.css">
+
+<!--load the D3 library from a CDN so we can use the d3 object in our script-->
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
 </head>
+
+<!-- body is basically the entire website-->
 <body>
+
+<!--h1 is header, p is paragraph. The table is built entirely by D3 inside #table-container-->
     <h1>Singapore PSI: Latest Readings</h1>
     <p id="status">Loading...</p>
 
-    <table>
-        <thead id="table-head"></thead>
-        <tbody id="table-body"></tbody>
-    </table>
+    <div id="table-container"></div>
 
+<!--a is a link. target="_blank" opens it in a new tab-->
+    <p class="source">
+        Data source: <a href="https://data.gov.sg/datasets/d_fe37906a0182569d891506e815e819b7/view" target="_blank">data.gov.sg</a>,
+        using the <a href="https://api-open.data.gov.sg/v2/real-time/api/psi" target="_blank">real-time PSI API</a>
+    </p>
+
+<!--js has to be called at the end so that the entire html page can load first-->
     <script src="scripts/script.js"></script>
 </body>
 </html>
