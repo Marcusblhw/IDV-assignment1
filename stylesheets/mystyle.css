@@ -57,3 +57,77 @@ tbody tr:nth-child(even) {
 tbody tr:hover {
     background-color: #d9ebf5;
 }
+
+/* ---------- PSI band colours (NEA bands) ----------
+   light background tint + darker text of the same hue, so the number stays readable */
+.band-good           { background-color: #dff3e4; color: #1e6b34; }
+.band-moderate       { background-color: #fff1bf; color: #7a5b00; }
+.band-unhealthy      { background-color: #ffd9b3; color: #8a4300; }
+.band-very-unhealthy { background-color: #f7c6c6; color: #8f1d1d; }
+.band-hazardous      { background-color: #e4c9ea; color: #5c1f66; }
+
+/* coloured cells keep their band colour on hover and on striped rows */
+tbody tr:hover td[class^="band-"] {
+    filter: brightness(0.95);
+}
+
+td[class^="band-"] {
+    font-weight: 600;
+    /* smooth fade when the colour changes */
+    transition: background-color 0.4s ease;
+}
+
+/* raw concentration cells: plain and slightly muted since bands don't apply */
+td.raw {
+    color: #7a8a96;
+}
+
+/* make the headline 24-hr PSI row stand out */
+tr.psi-row td {
+    font-size: 1.05rem;
+    border-top: 2px solid #3a7ca5;
+    border-bottom: 2px solid #3a7ca5;
+}
+
+tr.psi-row td:first-child {
+    font-weight: 700;
+}
+
+/* "Air quality now: Moderate" banner above the table */
+#summary {
+    display: inline-block;
+    padding: 8px 18px;
+    border-radius: 999px;
+    margin: 0 0 20px;
+}
+
+#summary:empty {
+    display: none;
+}
+
+/* legend under the table */
+#legend {
+    margin-top: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    font-size: 0.85rem;
+}
+
+.legend-title {
+    align-self: center;
+    font-weight: 600;
+}
+
+.legend-item {
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.note {
+    font-size: 0.8rem;
+    color: #7a8a96;
+    max-width: 600px;
+    margin: 12px auto 0;
+}
