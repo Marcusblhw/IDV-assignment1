@@ -23,7 +23,11 @@ Along the way, I also learnt:
 - How to vibe code using VS Code.
 - That JavaScript is used to fetch data from an API link.
 - That I can use Google Fonts inside my HTML.
-- That I can create tables with D3 instead of hard coding them in plain JavaScript. D3 is kind of like JavaScript's version of Python's Seaborn.
+- That I can create tables with D3 instead of hard coding them in plain JavaScript. D3 is kind of like JavaScript's version of Seaborn.
+- How to sync my work between VS Code and GitHub:
+  - **Commit:** save a snapshot of my changes locally with a message describing what I changed.
+  - **Push:** upload my committed changes from VS Code to the GitHub repo.
+  - **Pull:** download the latest changes from the GitHub repo into VS Code.
 
 ### Instructions
 
